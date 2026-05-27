@@ -131,7 +131,7 @@ export default function PostsPage() {
             <div className="container">
                 <article className="post">
                     <h1>{post.metadata.title}</h1>
-                    <p className="release-date">Released {new Date(post.metadata.date).toLocaleDateString()}</p>
+                    <p className="release-date">Released {new Date(post.metadata.date).toLocaleString()}</p>
                     <div className="backing-container">
                         <p className="summaryheader">
                             CONTENT SUMMARY
