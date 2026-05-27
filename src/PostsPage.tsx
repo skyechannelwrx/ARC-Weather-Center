@@ -156,7 +156,7 @@ export default function PostsPage() {
                             <div className="section section--left">
                                 <p>ADVISORY</p>
                                 <div className="advisory">
-                                    <div className={advisoryColors[post.metadata.advisory.toLowerCase()]}>
+                                    <div className={advisoryColors[post.metadata.advisory.toLowerCase() as keyof typeof advisoryColors]}>
                                         {post.metadata.advisory.toUpperCase()}
                                     </div>
                                 </div>
@@ -164,7 +164,7 @@ export default function PostsPage() {
                             <div className="section">
                                 <p>RISK</p>
                                 <div className="risk">
-                                    <div className={severityColors[post.metadata.risk.toLowerCase()]}>
+                                    <div className={severityColors[post.metadata.risk.toLowerCase() as keyof typeof severityColors]}>
                                         {post.metadata.risk.toUpperCase()}
                                     </div>
                                 </div>

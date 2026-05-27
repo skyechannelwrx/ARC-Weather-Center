@@ -37,7 +37,7 @@ export default function PostCard({ metadata }: Props) {
                     <div className="section section--left">
                         <p>ADVISORY</p>
                         <div className="advisory">
-                            <div className={advisoryColors[metadata.advisory.toLowerCase()]}>
+                            <div className={advisoryColors[metadata.advisory.toLowerCase() as keyof typeof advisoryColors]}>
                                 {metadata.advisory.toUpperCase()}
                             </div>
                         </div>
@@ -45,7 +45,7 @@ export default function PostCard({ metadata }: Props) {
                     <div className="section">
                         <p>RISK</p>
                         <div className="risk">
-                            <div className={severityColors[metadata.risk.toLowerCase()]}>
+                            <div className={severityColors[metadata.risk.toLowerCase() as keyof typeof severityColors]}>
                                 {metadata.risk.toUpperCase()}
                             </div>
                         </div>
