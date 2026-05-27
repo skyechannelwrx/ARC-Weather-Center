@@ -1,0 +1,495 @@
+@use './variables.scss';
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0}
+html {scroll-behavior: smooth; }
+
+body {
+    background-color: variables.$deep-blue;
+    color: variables.$primary-text;
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+button { font-family: var(--font-body); }
+
+.wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: var(--font-body);
+    min-height: 100vh;
+}
+
+.container {
+    padding-top: variables.$navbar-height;
+    padding-bottom: 40px;
+    background-color: variables.$deep-blue;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+}
+
+.contexthead {
+    background: linear-gradient(190deg, variables.$dark-blue, variables.$darker-blue);
+    max-width: 700px;
+    border: 2px solid variables.$high-vis-blue;
+    justify-content: start;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.5rem 2rem;
+    border-radius: 10px;
+    gap: 0.75rem;
+
+    h1 {
+        font-family: var(--font-title);
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    p {
+        line-height: 1;
+    }
+}
+
+.head-bar {
+    background: linear-gradient(190deg, variables.$dark-blue, variables.$darker-blue);
+    max-width: 700px;
+    border: 2px solid variables.$high-vis-blue;
+    justify-content: start;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.5rem 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+
+    h1 {
+        font-family: var(--font-title);
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .info-banner {
+        align-self: center;
+        background: variables.$dark-blue;
+        display: flex;
+        width: 97%;
+        height: 120px;
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: 10px;
+        border: 2px solid variables.$high-vis-blue;
+        justify-content: center;
+
+        .section {
+            height: 100%;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                font-size: 1rem;
+            }
+
+            .info {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2rem;
+                font-weight: bolder;
+            }
+        }
+    }
+
+    .status-banner {
+        align-self: center;
+        background: variables.$dark-blue;
+        display: flex;
+        width: 97%;
+        height: 120px;
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: 10px;
+        border: 2px solid variables.$high-vis-blue;
+
+        .section {
+            height: 100%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                font-size: 1rem;
+            }
+
+            .advisory {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2rem;
+                font-weight: bolder;
+            }
+    
+            .risk {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                font-size: 2rem;
+                align-items: center;
+                justify-content: center;
+                font-weight: bolder;
+            }
+        }
+
+        .section--left {
+            border-right: 2px solid variables.$high-vis-blue;
+        }
+
+        .orange {
+            color: variables.$status-orange;
+        }
+
+        .green {
+            color: variables.$status-green
+        }
+
+        .red {
+            color: variables.$status-red;
+        }
+
+        .pink {
+            color: variables.$status-pink;
+        }
+
+        .yellow {
+            color: variables.$status-yellow;
+        }
+    }
+}
+
+.cta-button {
+    width: 97%;
+    height: 40px;
+    background: linear-gradient(90deg, variables.$deep-blue, variables.$darker-blue);
+    border-radius: 4px;
+    align-self: center;
+    border: 2px solid variables.$high-vis-blue;
+    color: variables.$light-blue;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    transition: 0.1s linear;
+    font-family: var(--font-body);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+}
+
+.post {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border: 2px solid variables.$high-vis-blue;
+    border-radius: 10px;
+    padding: 0.5rem 2rem;
+    margin-top: 2rem;
+    background: linear-gradient(190deg, variables.$dark-blue, variables.$darker-blue);
+
+    h1 {
+        font-family: var(--font-title);
+        font-size: 2.5rem;
+        font-weight: 900;
+    }
+
+    h2 {
+        font-family: var(--font-title);
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 2rem;
+    }
+
+    h3 {
+        font-family: var(--font-title);
+        font-size: 1.7rem;
+    }
+
+    h4 { font-size: 1.3rem; }
+
+    p {
+        line-height: 1.2;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .info-banner {
+        align-self: center;
+        background: variables.$dark-blue;
+        display: flex;
+        width: 95%;
+        height: 120px;
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: 10px;
+        border: 2px solid variables.$high-vis-blue;
+        justify-content: center;
+
+        .section {
+            height: 100%;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                font-size: 1rem;
+            }
+
+            .info {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2rem;
+                font-weight: bolder;
+            }
+        }
+    }
+
+    .status-banner {
+        align-self: center;
+        background: variables.$dark-blue;
+        display: flex;
+        width: 95%;
+        height: 120px;
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: 10px;
+        border: 2px solid variables.$high-vis-blue;
+
+        .section {
+            height: 100%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                font-size: 1rem;
+            }
+
+            .advisory {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2rem;
+                font-weight: bolder;
+            }
+    
+            .risk {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                font-size: 2rem;
+                align-items: center;
+                justify-content: center;
+                font-weight: bolder;
+            }
+        }
+
+        .section--left {
+            border-right: 2px solid variables.$high-vis-blue;
+        }
+    }
+
+    .release-date {
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .backing-container {
+        background: variables.$dark-blue;
+        width: 95%;
+        padding: 0.5rem 2rem;
+        border: 2px solid variables.$high-vis-blue;
+        border-radius: 10px;
+        margin-top: 1rem;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+
+        .summaryheader {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .confidenceheader {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .probs {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+    }
+
+    .hazard-container {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 0.5rem;
+
+        width: 95%;
+        align-self: center;
+        background: variables.$dark-blue;
+        border: 2px solid variables.$high-vis-blue;
+        border-radius: 10px;
+        padding: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .hazard {
+        border-radius: 10px;
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+
+        .topcard {
+            height: 20px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .hazard-name {
+            height: 40px;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .hazard-summary {
+            height: 50px;
+            font-size: 1rem;
+            line-height: 1.1;
+        }
+
+        .hazard-risk {
+            height: 40px;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+    }
+
+    .meter-holder {
+        height: 10px;
+        display: flex;
+        width: 95%;
+        border-radius: 60px;
+        background: variables.$deep-blue;
+        transition: 200ms ease;
+
+        .meter {
+            display: flex;
+            height: 100%;
+            gap: 0.2rem;
+            flex-grow: 1;
+            transition: 200ms ease;
+        }
+
+        .meter:first-child {
+            border-radius: 60px 0 0 60px;
+        }
+
+        .meter:last-child {
+            border-radius: 0 60px 60px 0;
+        }
+
+        .meter:only-child {
+            border-radius: 60px;
+        }
+
+        .meter--orange {
+            background: variables.$status-orange;
+        }
+
+        .meter--green {
+            background: variables.$status-green;
+        }
+
+        .meter--red {
+            background: variables.$status-red;
+        }
+
+        .meter--yellow {
+            background: variables.$status-yellow;
+        }
+
+        .meter--pink {
+            background: variables.$status-pink;
+        }
+    }
+
+    .hazard--active {
+        background: variables.$lighter-blue;
+        border: 2px dashed variables.$high-vis-blue;
+
+        .topcard {
+            color: variables.$light-blue;
+        }
+    }
+
+    .hazard--inactive {
+        background: variables.$darker-blue;
+        border: 2px dashed variables.$greyed-out-blue;
+        color: variables.$greyed-out-blue;
+    }
+
+    .orange {
+        color: variables.$status-orange;
+    }
+
+    .green {
+        color: variables.$status-green
+    }
+
+    .red {
+        color: variables.$status-red;
+    }
+
+    .pink {
+        color: variables.$status-pink;
+    }
+
+    .yellow {
+        color: variables.$status-yellow;
+    }
+}

@@ -1,0 +1,33 @@
+$dark-blue: #181b23;
+$darker-blue: #2e353f;
+$deep-blue: #242830;
+$lighter-blue: #424c5f;
+$high-vis-blue: #5665827e;
+$greyed-out-blue: #3d61a49d;
+$light-blue: #74a2f7;
+$ghost-blue: #6697f8b3;
+
+$black: #000000;
+
+$dark-gray: #282828;
+
+$status-green: #78ff6b;
+$status-yellow: #f5ff6b;
+$status-orange: #ffcc4c;
+$status-red: #ff6b6b;
+$status-pink: #ff6bf3;
+
+// Font sizes
+
+$primary-text: 1rem;
+
+// Misc
+
+$navbar-height: 40px;
+
+:root {
+    color-scheme: dark;
+    --font-body: "Geist", system-ui, -apple-system, sans-serif;
+    --font-title: "Playfair Display", Georgia, serif;
+    font-family: var(--font-body);
+}
