@@ -4,7 +4,7 @@
 html {scroll-behavior: smooth; }
 
 body {
-    background-color: variables.$deep-blue;
+    background-color: variables.$darkest-gray;
     color: variables.$primary-text;
     font-family: var(--font-body);
     font-size: 16px;
@@ -25,7 +25,7 @@ button { font-family: var(--font-body); }
 .container {
     padding-top: variables.$navbar-height;
     padding-bottom: 40px;
-    background-color: variables.$deep-blue;
+    background-color: variables.$darkest-gray;
     height: 100%;
     width: 100%;
     display: flex;
@@ -35,7 +35,7 @@ button { font-family: var(--font-body); }
 }
 
 .contexthead {
-    background: linear-gradient(190deg, variables.$dark-blue, variables.$darker-blue);
+    background: variables.$dark-gray;
     max-width: 700px;
     border: 2px solid variables.$high-vis-blue;
     justify-content: start;
@@ -58,9 +58,10 @@ button { font-family: var(--font-body); }
 }
 
 .head-bar {
-    background: linear-gradient(190deg, variables.$dark-blue, variables.$darker-blue);
+    background: variables.$dark-gray;
     max-width: 700px;
     border: 2px solid variables.$high-vis-blue;
+    box-shadow: 0 10px 10px rgba(25, 25, 25, 0.75);
     justify-content: start;
     display: flex;
     flex-direction: column;
@@ -82,7 +83,8 @@ button { font-family: var(--font-body); }
 
     .info-banner {
         align-self: center;
-        background: variables.$dark-blue;
+        background: variables.$darkest-gray;
+        box-shadow: 0 10px 10px rgba(25, 25, 25, 0.75);
         display: flex;
         width: 97%;
         height: 120px;
@@ -118,7 +120,8 @@ button { font-family: var(--font-body); }
 
     .status-banner {
         align-self: center;
-        background: variables.$dark-blue;
+        background: variables.$darkest-gray;
+        box-shadow: 0 10px 10px rgba(25, 25, 25, 0.75);
         display: flex;
         width: 97%;
         height: 120px;
@@ -189,11 +192,10 @@ button { font-family: var(--font-body); }
 .cta-button {
     width: 97%;
     height: 40px;
-    background: linear-gradient(90deg, variables.$deep-blue, variables.$darker-blue);
+    background: variables.$dark-gray;
     border-radius: 4px;
     align-self: center;
     border: 2px solid variables.$high-vis-blue;
-    color: variables.$light-blue;
     padding: 0.5rem 1rem;
     font-size: 1rem;
     margin-top: 0.5rem;
@@ -212,10 +214,11 @@ button { font-family: var(--font-body); }
     flex-direction: column;
     justify-content: start;
     border: 2px solid variables.$high-vis-blue;
+    box-shadow: 0 10px 10px rgba(25, 25, 25, 0.75);
     border-radius: 10px;
     padding: 0.5rem 2rem;
     margin-top: 2rem;
-    background: linear-gradient(190deg, variables.$dark-blue, variables.$darker-blue);
+    background: variables.$dark-gray;
 
     h1 {
         font-family: var(--font-title);
@@ -245,7 +248,8 @@ button { font-family: var(--font-body); }
 
     .info-banner {
         align-self: center;
-        background: variables.$dark-blue;
+        background: variables.$darkest-gray;
+        box-shadow: 0 10px 10px rgba(25, 25, 25, 0.75);
         display: flex;
         width: 95%;
         height: 120px;
@@ -281,7 +285,8 @@ button { font-family: var(--font-body); }
 
     .status-banner {
         align-self: center;
-        background: variables.$dark-blue;
+        background: variables.$dark-gray;
+        box-shadow: 0 10px 10px rgba(25, 25, 25, 0.75);
         display: flex;
         width: 95%;
         height: 120px;
@@ -334,7 +339,8 @@ button { font-family: var(--font-body); }
     }
 
     .backing-container {
-        background: variables.$dark-blue;
+        background: variables.$darkest-gray;
+        box-shadow: 0 10px 10px rgba(25, 25, 25, 0.75);
         width: 95%;
         padding: 0.5rem 2rem;
         border: 2px solid variables.$high-vis-blue;
@@ -369,7 +375,8 @@ button { font-family: var(--font-body); }
 
         width: 95%;
         align-self: center;
-        background: variables.$dark-blue;
+        background: variables.$darkest-gray;
+        box-shadow: 0 10px 10px rgba(25, 25, 25, 0.75);
         border: 2px solid variables.$high-vis-blue;
         border-radius: 10px;
         padding: 0.5rem;
@@ -414,7 +421,7 @@ button { font-family: var(--font-body); }
         display: flex;
         width: 95%;
         border-radius: 60px;
-        background: variables.$deep-blue;
+        background: variables.$dark-gray;
         transition: 200ms ease;
 
         .meter {
@@ -459,7 +466,7 @@ button { font-family: var(--font-body); }
     }
 
     .hazard--active {
-        background: variables.$lighter-blue;
+        background: variables.$medium-gray;
         border: 2px dashed variables.$high-vis-blue;
 
         .topcard {
@@ -468,7 +475,7 @@ button { font-family: var(--font-body); }
     }
 
     .hazard--inactive {
-        background: variables.$darker-blue;
+        background: variables.$dark-gray;
         border: 2px dashed variables.$greyed-out-blue;
         color: variables.$greyed-out-blue;
     }
