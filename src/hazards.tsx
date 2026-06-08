@@ -30,6 +30,10 @@ export const ALL_HAZARDS = [
     {
         id: "cold",
         sections: 3,
+    },
+    {
+        id: "condensation",
+        sections: 1,
     }
 ] as const;
 
