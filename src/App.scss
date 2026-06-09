@@ -3,6 +3,36 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0}
 html {scroll-behavior: smooth; }
 
+nav {
+    display: flex;
+    flex-direction: row;
+    background: variables.$darkest-gray;
+    border-bottom: 1px solid variables.$light-gray;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 2rem;
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        list-style: none;
+
+        a {
+            color: variables.$light-gray;
+            text-decoration: none;
+            letter-spacing: 0.03em;
+            font-size: 1rem;
+            transition: 0.2s ease;
+        }
+
+        a:hover {
+            color: variables.$status-pink;
+        }
+    }
+}
+
 body {
     background-color: variables.$darkest-gray;
     color: variables.$primary-text;
@@ -48,8 +78,11 @@ button { font-family: var(--font-body); }
 
     h1 {
         font-family: var(--font-title);
-        font-size: 2.5rem;
         font-weight: bold;
+        font-size: clamp(2.2rem, 3vw, 2.8rem);
+        line-height: 1.05;
+        letter-spacing: -2px;
+        margin-bottom: 1.75rem;
     }
 
     p {
@@ -66,14 +99,17 @@ button { font-family: var(--font-body); }
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 0.5rem 2rem;
+    padding: 1rem 2rem;
     border-radius: 10px;
     margin-top: 2rem;
 
     h1 {
         font-family: var(--font-title);
-        font-size: 2.5rem;
         font-weight: bold;
+        font-size: clamp(2.2rem, 3vw, 2.8rem);
+        line-height: 1.05;
+        letter-spacing: -2px;
+        margin-bottom: 1.75rem;
     }
 
     h2 {
@@ -217,25 +253,28 @@ button { font-family: var(--font-body); }
     box-shadow: 0 10px 10px rgba(25, 25, 25, 0.75);
     border-radius: 10px;
     padding: 0.5rem 2rem;
-    margin-top: 2rem;
+    margin-top: 1.2rem;
     background: variables.$dark-gray;
 
     h1 {
         font-family: var(--font-title);
-        font-size: 2.5rem;
         font-weight: 900;
+        line-height: 1.05;
+        letter-spacing: -2px;
+        margin-bottom: 1.5rem;
+        font-size: clamp(2.2rem, 3vw, 2.8rem);
     }
 
     h2 {
         font-family: var(--font-title);
-        font-size: 2rem;
+        font-size: clamp(1.8rem, 3vw, 2rem);
         font-weight: bold;
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 
     h3 {
         font-family: var(--font-title);
-        font-size: 1.7rem;
+        font-size: clamp(1.4rem, 3vw, 1.7rem);
     }
 
     h4 { font-size: 1.3rem; }
@@ -244,6 +283,12 @@ button { font-family: var(--font-body); }
         line-height: 1.2;
         font-size: 1.1rem;
         margin-bottom: 1rem;
+    }
+
+    ul {
+        padding: 0.5rem 1rem;
+        line-height: 1.2;
+        font-size: 1.1rem;
     }
 
     .info-banner {
@@ -435,37 +480,48 @@ button { font-family: var(--font-body); }
             gap: 0.2rem;
             flex-grow: 1;
             transition: 200ms ease;
-        }
-
-        .meter:first-child {
-            border-radius: 60px 0 0 60px;
-        }
-
-        .meter:last-child {
-            border-radius: 0 60px 60px 0;
-        }
-
-        .meter:only-child {
-            border-radius: 60px;
+            background-color: variables.$dark-gray;
+            border: 0;
+            border-radius: 6px;
         }
 
         .meter--orange {
+            color: variables.$status-orange;
+        }
+
+        .meter--orange::-webkit-progress-bar, .meter--orange::-moz-progress-bar {
             background: variables.$status-orange;
         }
 
         .meter--green {
+            color: variables.$status-green;
+        }
+
+        .meter--green::-webkit-progress-bar, .meter--green::-moz-progress-bar {
             background: variables.$status-green;
         }
 
         .meter--red {
+            color: variables.$status-red;
+        }
+
+        .meter--red::-webkit-progress-bar, .meter--red::-moz-progress-bar {
             background: variables.$status-red;
         }
 
         .meter--yellow {
+            color: variables.$status-yellow;
+        }
+
+        .meter--yellow::-webkit-progress-bar, .meter--yellow::-moz-progress-bar {
             background: variables.$status-yellow;
         }
 
         .meter--pink {
+            color: variables.$status-pink;
+        }
+
+        .meter--pink::-webkit-progress-bar, .meter--pink::-moz-progress-bar {
             background: variables.$status-pink;
         }
     }

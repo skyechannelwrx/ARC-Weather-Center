@@ -127,8 +127,6 @@ export default function PostsPage() {
     const Content = post.Component;
 
     return (
-        <div className="wrap">
-            <div className="container">
                 <article className="post">
                     <h1>{post.metadata.title}</h1>
                     <p className="release-date">Released {new Date(post.metadata.date).toLocaleString()}</p>
@@ -156,11 +154,9 @@ export default function PostsPage() {
                         <p className={`probs ${getConfidenceColor(post.metadata.confidence)}`}>
                             {post.metadata.confidence}%, {getConfidenceAttribute(post.metadata.confidence)}
                         </p>
-                        <Meter 
-                            active={post.metadata.confidence}
-                            total={100}
-                            color={getConfidenceColor(post.metadata.confidence)}
-                        />
+                        <div className="meter-holder">
+                            <progress className={`meter meter--${getConfidenceColor(post.metadata.confidence)}`} value={post.metadata.confidence} max={100}/>
+                        </div>
                     </div>
                     {post.metadata.type === "event" && (
                         <div className="status-banner">
@@ -211,7 +207,5 @@ export default function PostsPage() {
                     )}
                     <Content />
                 </article>
-            </div>
-        </div>
     )
 }
