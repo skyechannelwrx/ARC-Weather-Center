@@ -29,7 +29,9 @@ export default function HazardCard({ name, status, level, sections, used, color,
             <div className="hazard-summary">
                 {summary}
             </div>
-            <Meter total={sections} active={used} color={color.toLowerCase()} />
+            <div className="meter-holder">
+                <progress className={`meter meter--${color.toLowerCase()}`} value={used} max={sections}/>
+            </div>
         </div>
     )
 }
