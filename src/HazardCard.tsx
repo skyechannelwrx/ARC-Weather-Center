@@ -1,5 +1,3 @@
-import Meter from "./Meter";
-
 interface Props {
     name: string;
     status: string;

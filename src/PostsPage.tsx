@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 import HazardCard from "./HazardCard";
 import { ALL_HAZARDS } from "./hazards";
-import Meter from "./Meter";
 
 const modules = import.meta.glob(
     "./content/**/*.mdx",
