@@ -565,3 +565,71 @@ button { font-family: var(--font-body); }
         color: variables.$status-yellow;
     }
 }
+
+.information {
+    background: variables.$dark-gray;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 900px;
+    padding: 1rem 2rem;
+    box-shadow: 0 10px 10px rgba(25, 25, 25, 0.75);
+    display: flex;
+    border: 2px solid variables.$high-vis-blue;
+    flex-direction: column;
+    margin-top: 1rem;
+
+    h1 {
+        font-family: var(--font-title);
+        font-weight: 900;
+        line-height: 1.05;
+        letter-spacing: -2px;
+        margin-bottom: 1.5rem;
+        font-size: clamp(2.2rem, 3vw, 2.8rem);
+    }
+
+    h2 {
+        font-family: var(--font-title);
+        font-size: clamp(1.8rem, 3vw, 2rem);
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+
+    h3 {
+        font-family: var(--font-title);
+        font-size: clamp(1.4rem, 3vw, 1.7rem);
+    }
+
+    h4 { font-size: 1.3rem; }
+
+    p {
+        line-height: 1.2;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        padding: 0.5rem 1rem;
+        line-height: 1.2;
+        font-size: 1.1rem;
+    }
+
+    .orange {
+        color: variables.$status-orange;
+    }
+
+    .green {
+        color: variables.$status-green
+    }
+
+    .red {
+        color: variables.$status-red;
+    }
+
+    .pink {
+        color: variables.$status-pink;
+    }
+
+    .yellow {
+        color: variables.$status-yellow;
+    }
+}
