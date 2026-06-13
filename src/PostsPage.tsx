@@ -18,10 +18,10 @@ const posts = Object.values(modules).map(
 const advisoryColors = {
     proceed: "green",
     mitigate: "yellow",
-    monitor: "orange",
+    monitor: "yellow",
     standby: "orange",
     suspend: "red",
-    terminate: "red",
+    terminate: "pink",
 } as const;
 
 const severityColors = {
