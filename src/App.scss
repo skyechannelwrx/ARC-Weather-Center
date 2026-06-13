@@ -565,3 +565,12 @@ button { font-family: var(--font-body); }
         color: variables.$status-yellow;
     }
 }
+
+.information {
+    background: variables.$dark-gray;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 900px;
+
+    
+}
