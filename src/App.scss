@@ -414,6 +414,12 @@ button { font-family: var(--font-body); }
         .probs {
             font-size: clamp(2rem, 3vw, 2.5rem);
             font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        .timeheader {
+            font-size: clamp(1.1rem, 3vw, 1.5rem);
+            font-weight: bold;
         }
     }
 

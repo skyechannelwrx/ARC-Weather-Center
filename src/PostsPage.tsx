@@ -58,6 +58,42 @@ export default function PostsPage() {
         return "green"
     }
 
+    function returnProbAsString(confidence: number) {
+        if (confidence > 95) {
+            return ">95%"
+        }
+
+        if (confidence < 5) {
+            return "<5%"
+        }
+
+        return `${confidence}%`
+    }
+
+    function getRiskConfidenceAttribute(confidence: number) {
+        if (confidence >= 95) {
+            return "Very Likely"
+        }
+
+        if (confidence >= 80) {
+            return "Likely"
+        }
+
+        if (confidence >= 60) {
+            return "Trending Likely"
+        }
+
+        if (confidence >= 40) {
+            return "Possible"
+        }
+
+        if (confidence >= 20) {
+            return "Unlikely"
+        }
+
+        return "Very Unlikely"
+    }
+
     function getConfidenceAttribute(confidence: number) {
         if (confidence >= 95) {
             return "Very High"
@@ -146,6 +182,18 @@ export default function PostsPage() {
                         </p>
                         <p>{post.metadata.description}</p>
                     </div>
+                    {(post.metadata.validfrom && post.metadata.validto && post.metadata.nextupdateby && post.metadata.type === "event") &&
+                        <div className="backing-container">
+                            <p className="timeheader">
+                                FORECAST VALID
+                            </p>
+                            <p>{new Date(post.metadata.validfrom).toLocaleString()} to {new Date(post.metadata.validto).toLocaleString()}</p>
+                            <p className="timeheader">
+                                NEXT UPDATE BY
+                            </p>
+                            <p>{new Date(post.metadata.nextupdateby).toLocaleString()}</p>
+                        </div>
+                    }
                     <div className="backing-container">
                         <p className="confidenceheader">
                             FORECAST CONFIDENCE
@@ -157,6 +205,31 @@ export default function PostsPage() {
                             <progress className={`meter meter--${getConfidenceColor(post.metadata.confidence)}`} value={post.metadata.confidence} max={100}/>
                         </div>
                     </div>
+                    {(post.metadata.problowrisk && post.metadata.probmodrisk && post.metadata.probhighrisk && post.metadata.type === "event") &&
+                        <div className="backing-container">
+                            <p className="confidenceheader">
+                                CONFIDENCE PROBABILITY OF HAZARD RISK ISSUANCE
+                            </p>
+                            <p className="probs yellow">
+                                Low: {returnProbAsString(post.metadata.problowrisk)}%, {getRiskConfidenceAttribute(post.metadata.problowrisk)}
+                            </p>
+                            <div className="meter-holder">
+                                <progress className="meter meter--yellow" value={post.metadata.problowrisk} max={100} />
+                            </div>
+                            <p className="probs red">
+                                Moderate: {returnProbAsString(post.metadata.probmodrisk)}%, {getRiskConfidenceAttribute(post.metadata.probmodrisk)}
+                            </p>
+                            <div className="meter-holder">
+                                <progress className="meter meter--red" value={post.metadata.probmodrisk} max={100} />
+                            </div>
+                            <p className="probs pink">
+                                High: {returnProbAsString(post.metadata.probhighrisk)}%, {getRiskConfidenceAttribute(post.metadata.probhighrisk)}
+                            </p>
+                            <div className="meter-holder">
+                                <progress className="meter meter--pink" value={post.metadata.probhighrisk} max={100} />
+                            </div>
+                        </div>
+                    }
                     {post.metadata.type === "event" && (
                         <div className="status-banner">
                             <div className="section section--left">
