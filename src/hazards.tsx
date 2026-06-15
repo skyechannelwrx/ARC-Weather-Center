@@ -34,6 +34,10 @@ export const ALL_HAZARDS = [
     {
         id: "condensation",
         sections: 1,
+    },
+    {
+        id: "air quality",
+        sections: 3,
     }
 ] as const;
 
