@@ -211,19 +211,19 @@ export default function PostsPage() {
                                 CONFIDENCE PROBABILITY OF HAZARD RISK ISSUANCE
                             </p>
                             <p className="probs yellow">
-                                Low: {returnProbAsString(post.metadata.problowrisk)}%, {getRiskConfidenceAttribute(post.metadata.problowrisk)}
+                                Low: {returnProbAsString(post.metadata.problowrisk)}, {getRiskConfidenceAttribute(post.metadata.problowrisk)}
                             </p>
                             <div className="meter-holder">
                                 <progress className="meter meter--yellow" value={post.metadata.problowrisk} max={100} />
                             </div>
                             <p className="probs red">
-                                Moderate: {returnProbAsString(post.metadata.probmodrisk)}%, {getRiskConfidenceAttribute(post.metadata.probmodrisk)}
+                                Moderate: {returnProbAsString(post.metadata.probmodrisk)}, {getRiskConfidenceAttribute(post.metadata.probmodrisk)}
                             </p>
                             <div className="meter-holder">
                                 <progress className="meter meter--red" value={post.metadata.probmodrisk} max={100} />
                             </div>
                             <p className="probs pink">
-                                High: {returnProbAsString(post.metadata.probhighrisk)}%, {getRiskConfidenceAttribute(post.metadata.probhighrisk)}
+                                High: {returnProbAsString(post.metadata.probhighrisk)}, {getRiskConfidenceAttribute(post.metadata.probhighrisk)}
                             </p>
                             <div className="meter-holder">
                                 <progress className="meter meter--pink" value={post.metadata.probhighrisk} max={100} />
